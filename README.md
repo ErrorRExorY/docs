@@ -17,3 +17,4 @@ Before installing GuardianV on your server, make sure you have met the following
 
 1. A running FiveM server
 2. Basic understanding of server administration and configuration
+3. [Screenshots](https://github.com/jaimeadf/discord-screenshot/releases) Resource installed if you want Screenshots with your actions
