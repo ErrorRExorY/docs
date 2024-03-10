@@ -15,7 +15,7 @@ Download the latest version of GuardianV from FiveM [Keymaster-Assets](https://k
 
 You'll get an email wich will contain a key based on the model you chose.
 
-Go to [Licenses]https://guardianv.de/license as shown down below and your Resource is almost ready to start and ban some cheaters!
+Go to [Licenses] (https://guardianv.de/license) as shown down below and your Resource is almost ready to start and ban some cheaters!
 
 ![](/img/licenses.png)
 
