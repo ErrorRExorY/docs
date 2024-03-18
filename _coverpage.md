@@ -9,4 +9,4 @@
 - Redesigned search box.
 
 [Website](https://guardianv.de)
-[Getting Started](#headline)
+[Getting Started](#home)
