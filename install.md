@@ -68,248 +68,263 @@ You will have to get your ApiKey from the Profile-Page and your Username in orde
 ### Basic config.lua
 
 ```
-GUARDIANV                          = {}
+GuardianV              = {}
 
-GUARDIANV.ApiKey = ""
-GUARDIANV.Username = ""
+GuardianV.ApiKey = "0"
+GuardianV.Username = ""
 
---【 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝗖𝗵𝗲𝗰𝗸 】--
-GUARDIANV.Version                  = "7.0.0"
+-- GuardianV Version
+GuardianV.Version      = "1.1.0"
 
---【 𝗦𝗲𝗿𝘃𝗲𝗿 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 】--
-GUARDIANV.ServerConfig             = {
-    Name = "TestServer",
+-- Server Configuration
+GuardianV.ServerConfig = {
+    Name = "Mein Server",
     Port  = 30120
 }
 
---【 𝗖𝗵𝗮𝘁 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 】--
-GUARDIANV.ChatSettings             = {
-    Enable      = true,
-    PrivateWarn = true,
+-- ACE
+GuardianV.ACE             = {
+    Enable = true,
+    Admin = "GuardianV.Admin",
+    Bypass = "GuardianV.Bypass",
+    Unban = "GuardianV.Unban"
 }
 
---【 𝗦𝗰𝗿𝗲𝗲𝗻𝗦𝗵𝗼𝘁 】--
-GUARDIANV.ScreenShot               = {
-    Enable  = true,
-    Format  = "PNG",
-    Quality = 1,
+-- Chat Settings
+GuardianV.ChatSettings             = {
+    Enable      = true, -- Enable chat features
+    PrivateWarn = true  -- Warn players for private messages
 }
 
---【 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗼𝗻 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 】--
-GUARDIANV.Connection               = {
-    AntiBlackListName = false,
-    AntiVPN  = false,
-    HideIP = false
+-- Screenshot Settings
+GuardianV.ScreenShot               = {
+    Enable  = true,  -- Enable screenshot feature
+    Format  = "PNG", -- Screenshot format
+    Quality = 1      -- Screenshot quality
 }
 
---【 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 】--
-GUARDIANV.Message                  = {
-    Kick = "⚡️You are kicked from the Server!⚡️ Protection By GUARDIANV®. Don't Try to Cheat on this Server",
-    Ban  = "⛔️You are banned from the Server!⛔️ Please create a Supportticket on our Server, if you think this was a mistake"
+-- Connection Settings
+GuardianV.Connection               = {
+    AntiBlackListName = true,
+    AntiVPN  = true,
+    HideIP = true
 }
 
---【 𝗔𝗱𝗺𝗶𝗻 𝗠𝗲𝗻𝘂 】--
-GUARDIANV.AdminMenu                = {
-    Enable         = true,
-    Key            = "F9",
-    MenuPunishment = "BAN",
+-- Spawn Settings
+GuardianV.Spawn                    = {
+    LongSpawnMode = true -- Enable long spawn mode
 }
 
---【 𝗔𝗻𝘁𝗶 𝗧𝗿𝗮𝗰𝗸 𝗣𝗹𝗮𝘆𝗲𝗿 】--
-GUARDIANV.AntiTrackPlayer          = true
-GUARDIANV.MaxTrack                 = 10
-GUARDIANV.TrackPunishment          = "KICK"                                        
+-- Message Settings
+GuardianV.Message                  = {
+    Kick = "⚡️😮‍💨You are kicked from the Server!⚡️ Protection By GUARDIANV®. Don't Try to Cheat on this Server",
+    Ban  = "⛔️😮‍💨You are banned from the Server!⛔️ Please create a Supportticket on our Server, if you think this was a mistake"
+}
 
---【 𝗔𝗻𝘁𝗶 𝗛𝗲𝗮𝗹𝘁𝗵 𝗛𝗮𝗰𝗸 】--
-GUARDIANV.AntiHealthHack           = true
-GUARDIANV.MaxHealth                = 200
-GUARDIANV.HealthPunishment         = "KICK"     
+-- Admin Menu Settings
+GuardianV.AdminMenu                = {
+    Enable         = true, -- Enable admin menu
+    Key            = "F9", -- Admin menu activation key
+    MenuPunishment = "KICK" -- Punishment for unauthorized access
+}
 
---【 𝗔𝗻𝘁𝗶 𝗔𝗿𝗺𝗼𝗿 𝗛𝗮𝗰𝗸 】--
-GUARDIANV.AntiArmorHack            = true
-GUARDIANV.MaxArmor                 = 100
-GUARDIANV.ArmorPunishment          = "KICK"  
+-- Anti-Track Player Settings
+GuardianV.AntiTrackPlayer          = true
+GuardianV.MaxTrack                 = 10
+GuardianV.TrackPunishment          = "WARN"
 
---【 𝗔𝗻𝘁𝗶 𝗧𝗮𝘀𝗸𝘀 】--
-GUARDIANV.AntiBlacklistTasks       = true
-GUARDIANV.TasksPunishment          = "KICK"  
+-- Anti-Health Hack Settings
+GuardianV.AntiHealthHack           = true
+GuardianV.MaxHealth                = 200
+GuardianV.HealthPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗣𝗹𝗮𝘆 𝗔𝗻𝗶𝗺𝘀 】--
-GUARDIANV.AntiBlacklistAnims       = true
-GUARDIANV.AnimsPunishment          = "KICK"  
+-- Anti-Armor Hack Settings
+GuardianV.AntiArmorHack            = true
+GuardianV.MaxArmor                 = 100
+GuardianV.ArmorPunishment          = "KICK"
 
---【 𝗦𝗮𝗳𝗲 𝗣𝗹𝗮𝘆𝗲𝗿𝘀 】--
-GUARDIANV.SafePlayers              = true
-GUARDIANV.AntiInfinityAmmo         = true
+-- Anti-Blacklist Tasks Settings
+GuardianV.AntiBlacklistTasks       = true
+GuardianV.TasksPunishment          = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗦𝗽𝗲𝗰𝘁𝗮𝘁𝗲 】--
-GUARDIANV.AntiSpectate             = true
-GUARDIANV.SpactatePunishment       = "KICK"  
+-- Anti-Blacklist Anims Settings
+GuardianV.AntiBlacklistAnims       = true
+GuardianV.AnimsPunishment          = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗪𝗲𝗮𝗽𝗼𝗻 】--
-GUARDIANV.AntiBlackListWeapon      = true
-GUARDIANV.AntiAddWeapon            = true
-GUARDIANV.AntiRemoveWeapon         = true
-GUARDIANV.AntiWeaponsExplosive     = true
-GUARDIANV.WeaponPunishment         = "KICK"  
+-- Safe Players Settings
+GuardianV.SafePlayers              = true
+GuardianV.AntiInfinityAmmo         = true
 
---【 𝗔𝗻𝘁𝗶 𝗚𝗼𝗱𝗠𝗼𝗱𝗲 】--
-GUARDIANV.AntiGodMode              = true
-GUARDIANV.GodPunishment            = "BAN"                                                            
+-- Anti-Spectate Settings
+GuardianV.AntiSpectate             = true
+GuardianV.SpectatePunishment       = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗜𝗻𝘃𝗶𝘀𝗶𝗯𝗹𝗲 】--
-GUARDIANV.AntiInvisible            = true
-GUARDIANV.InvisiblePunishment      = "KICK"  
+-- Anti-BlackList Weapon Settings
+GuardianV.AntiBlackListWeapon      = true
+GuardianV.AntiAddWeapon            = true
+GuardianV.AntiRemoveWeapon         = true
+GuardianV.AntiWeaponsExplosive     = true
+GuardianV.WeaponPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗵𝗮𝗻𝗴𝗲 𝗦𝗽𝗲𝗲𝗱 】--
-GUARDIANV.AntiChangeSpeed          = true
-GUARDIANV.SpeedPunishment          = "KICK"  
+-- Anti-God Mode Settings
+GuardianV.AntiGodMode              = true
+GuardianV.GodPunishment            = "BAN"
 
---【 𝗔𝗻𝘁𝗶 𝗙𝗿𝗲𝗲 𝗖𝗮𝗺 】--
-GUARDIANV.AntiFreeCam              = true
-GUARDIANV.CamPunishment            = "KICK"  
+-- Anti-Invisible Settings
+GuardianV.AntiInvisible            = true
+GuardianV.InvisiblePunishment      = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗥𝗮𝗶𝗻𝗯𝗼𝘄 𝗩𝗲𝗵𝗶𝗰𝗹𝗲 】--
-GUARDIANV.AntiRainbowVehicle       = true
-GUARDIANV.RainbowPunishment        = "KICK"  
+-- Anti-Change Speed Settings
+GuardianV.AntiChangeSpeed          = true
+GuardianV.SpeedPunishment          = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗣𝗹𝗮𝘁𝗲 】--
-GUARDIANV.AntiPlateChanger         = true
-GUARDIANV.AntiBlackListPlate       = true
-GUARDIANV.PlatePunishment          = "KICK"  
+-- Anti-Free Cam Settings
+GuardianV.AntiFreeCam              = false
+GuardianV.CamPunishment            = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗩𝗶𝘀𝗶𝗼𝗻 】--
-GUARDIANV.AntiNightVision          = true
-GUARDIANV.AntiThermalVision        = true
-GUARDIANV.VisionPunishment         = "KICK"  
+-- Anti-Rainbow Vehicle Settings
+GuardianV.AntiRainbowVehicle       = true
+GuardianV.RainbowPunishment        = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗦𝘂𝗽𝗲𝗿 𝗝𝘂𝗺𝗽 】--
-GUARDIANV.AntiSuperJump            = true
-GUARDIANV.JumpPunishment           = "KICK"  
+-- Anti-Plate Changer Settings
+GuardianV.AntiPlateChanger         = true
+GuardianV.AntiBlackListPlate       = true
+GuardianV.PlatePunishment          = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗽𝗼𝗿𝘁 】--
-GUARDIANV.AntiTeleport             = true
-GUARDIANV.MaxFootDistance          = 200
-GUARDIANV.MaxVehicleDistance       = 600
-GUARDIANV.TeleportPunishment       = "KICK"  
+-- Anti-Vision Settings
+GuardianV.AntiNightVision          = true
+GuardianV.AntiThermalVision        = true
+GuardianV.VisionPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗡𝗼𝗰𝗹𝗶𝗽 】--
-GUARDIANV.AntiNoclip               = true
-GUARDIANV.NoclipPunishment         = "KICK"  
+-- Anti-Super Jump Settings
+GuardianV.AntiSuperJump            = true
+GuardianV.JumpPunishment           = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗣𝗲𝗱 𝗖𝗵𝗮𝗻𝗴𝗲𝗿 】--
-GUARDIANV.AntiPedChanger           = true
-GUARDIANV.PedChangePunishment      = "KICK"  
+-- Anti-Teleport Settings
+GuardianV.AntiTeleport             = true
+GuardianV.MaxFootDistance          = 200
+GuardianV.MaxVehicleDistance       = 600
+GuardianV.TeleportPunishment       = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗜𝗻𝗳𝗶𝗻𝗶𝘁𝗲 𝗦𝘁𝗮𝗺𝗶𝗻𝗮 】--
-GUARDIANV.AntiInfiniteStamina      = true
-GUARDIANV.InfinitePunishment       = "KICK"  
+-- Anti-Noclip Settings
+GuardianV.AntiNoclip               = true
+GuardianV.NoclipPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗥𝗮𝗴𝗱𝗼𝗹𝗹 】--
-GUARDIANV.AntiRagdoll              = true
-GUARDIANV.RagdollPunishment        = "KICK"  
+-- Anti-Ped Changer Settings
+GuardianV.AntiPedChanger           = true
+GuardianV.PedChangePunishment      = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗠𝗲𝗻𝘆𝗼𝗼 】--
-GUARDIANV.AntiMenyoo               = true
-GUARDIANV.MenyooPunishment         = "KICK"  
+-- Anti-Infinite Stamina Settings
+GuardianV.AntiInfiniteStamina      = false
+GuardianV.InfinitePunishment       = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗔𝗶𝗺 𝗔𝘀𝘀𝗶𝘀𝘁 】--
-GUARDIANV.AntiAimAssist            = true
-GUARDIANV.AimAssistPunishment      = "KICK"  
+-- Anti-Ragdoll Settings
+GuardianV.AntiRagdoll              = true
+GuardianV.RagdollPunishment        = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗥𝗲𝘀𝗼𝘂𝗿𝗰𝗲 】--
-GUARDIANV.AntiResourceStopper      = true
-GUARDIANV.AntiResourceStarter      = true
-GUARDIANV.AntiResourceRestarter    = true
-GUARDIANV.ResourcePunishment       = "KICK"  
+-- Anti-Menyoo Settings
+GuardianV.AntiMenyoo               = true
+GuardianV.MenyooPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗵𝗮𝗻𝗴𝗲 𝗙𝗹𝗮𝗴 】--
-GUARDIANV.AntiTinyPed              = true
-GUARDIANV.PedFlagPunishment        = "KICK"  
+-- Anti-Aim Assist Settings
+GuardianV.AntiAimAssist            = true
+GuardianV.AimAssistPunishment      = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗦𝘂𝗶𝗰𝗶𝗱𝗲 】--
-GUARDIANV.AntiSuicide              = true
-GUARDIANV.SuicidePunishment        = "KICK"  
+-- Anti-Resource Stopper Settings
+GuardianV.AntiResourceStopper      = true
+GuardianV.AntiResourceStarter      = false
+GuardianV.AntiResourceRestarter    = false
+GuardianV.ResourcePunishment       = "WARN"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗼𝗹𝗹𝗲𝗰𝘁𝗲𝗱 𝗣𝗶𝗰𝗸𝘂𝗽 】--
-GUARDIANV.AntiPickupCollect        = true
-GUARDIANV.PickupPunishment         = "KICK"  
+-- Anti-Tiny Ped Settings
+GuardianV.AntiTinyPed              = true
+GuardianV.PedFlagPunishment        = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗵𝗮𝘁 】--
-GUARDIANV.AntiSpamChat             = true
-GUARDIANV.MaxMessage               = 10
-GUARDIANV.CoolDownSec              = 3
-GUARDIANV.ChatPunishment           = "KICK"  
+-- Anti-Suicide Settings
+GuardianV.AntiSuicide              = true
+GuardianV.SuicidePunishment        = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 】--
-GUARDIANV.AntiBlackListCommands    = true
-GUARDIANV.CMDPunishment            = "KICK"  
+-- Anti-Pickup Collect Settings
+GuardianV.AntiPickupCollect        = true
+GuardianV.PickupPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗵𝗮𝗻𝗴𝗲 𝗗𝗮𝗺𝗮𝗴𝗲 】--
-GUARDIANV.AntiWeaponDamageChanger  = true
-GUARDIANV.AntiVehicleDamageChanger = true
-GUARDIANV.DamagePunishment         = "KICK"  
+-- Anti-Spam Chat Settings
+GuardianV.AntiSpamChat             = true
+GuardianV.MaxMessage               = 10
+GuardianV.CoolDownSec              = 3
+GuardianV.ChatPunishment           = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗪𝗼𝗿𝗱 】--
-GUARDIANV.AntiBlackListWord        = true
-GUARDIANV.WordPunishment           = "KICK"  
+-- Anti-BlackList Commands Settings
+GuardianV.AntiBlackListCommands    = true
+GuardianV.CMDPunishment            = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗕𝗿𝗶𝗻𝗴 𝗔𝗹𝗹 】--
-GUARDIANV.AntiBringAll             = true
-GUARDIANV.BringAllPunishment       = "KICK"  
+-- Anti-Change Damage Settings
+GuardianV.AntiWeaponDamageChanger  = true
+GuardianV.AntiVehicleDamageChanger = true
+GuardianV.DamagePunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗧𝗿𝗶𝗴𝗴𝗲𝗿 】--
-GUARDIANV.AntiBlackListTrigger     = true
-GUARDIANV.AntiSpamTrigger          = true
-GUARDIANV.TriggerPunishment        = "KICK"  
+-- Anti-BlackList Word Settings
+GuardianV.AntiBlackListWord        = true
+GuardianV.WordPunishment           = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗹𝗲𝗮𝗿 𝗣𝗲𝗱 𝗧𝗮𝘀𝗸𝘀 】--
-GUARDIANV.AntiClearPedTasks        = true
-GUARDIANV.MaxClearPedTasks         = 5
-GUARDIANV.CPTPunishment            = "KICK"  
+-- Anti-Bring All Settings
+GuardianV.AntiBringAll             = true
+GuardianV.BringAllPunishment       = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗧𝗮𝘇𝗲 𝗣𝗹𝗮𝘆𝗲𝗿𝘀 】--
-GUARDIANV.AntiTazePlayers          = true
-GUARDIANV.MaxTazeSpam              = 3
-GUARDIANV.TazePunishment           = "KICK"  
+-- Anti-Trigger Settings
+GuardianV.AntiBlackListTrigger     = true
+GuardianV.AntiSpamTrigger          = true
+GuardianV.TriggerPunishment        = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗜𝗻𝗷𝗲𝗰𝘁 】--
-GUARDIANV.AntiInject               = true
-GUARDIANV.InjectPunishment         = "KICK"  
+-- Anti-Clear Ped Tasks Settings
+GuardianV.AntiClearPedTasks        = true
+GuardianV.MaxClearPedTasks         = 5
+GuardianV.CPTPunishment            = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗘𝘅𝗽𝗹𝗼𝘀𝗶𝗼𝗻 】--
-GUARDIANV.AntiBlackListExplosion   = true
-GUARDIANV.AntiExplosionSpam        = true
-GUARDIANV.MaxExplosion             = 10
-GUARDIANV.ExplosionSpamPunishment  = "KICK"  
+-- Anti-Taze Players Settings
+GuardianV.AntiTazePlayers          = true
+GuardianV.MaxTazeSpam              = 3
+GuardianV.TazePunishment           = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗘𝗻𝘁𝗶𝘁𝘆 𝗦𝗽𝗮𝘄𝗻𝗲𝗿 】--
-GUARDIANV.AntiBlackListObject      = true
-GUARDIANV.AntiBlackListPed         = true
-GUARDIANV.AntiBlackListBuilding    = true
-GUARDIANV.AntiBlackListVehicle     = true
-GUARDIANV.EntityPunishment         = "BAN"                                                            
+-- Anti-Inject Settings
+GuardianV.AntiInject               = true
+GuardianV.InjectPunishment         = "KICK"
 
---【 𝗔𝗻𝘁𝗶 𝗘𝗻𝘁𝗶𝘁𝘆 𝗦𝗽𝗮𝗺𝗲𝗿 】--
-GUARDIANV.AntiSpawnNPC             = true
+-- Anti-Explosion Settings
+GuardianV.AntiBlackListExplosion   = true
+GuardianV.AntiExplosionSpam        = true
+GuardianV.MaxExplosion             = 10
+GuardianV.ExplosionSpamPunishment  = "KICK"
 
-GUARDIANV.AntiSpamVehicle          = true
-GUARDIANV.MaxVehicle               = 10
+-- Anti-Entity Spawn Settings
+GuardianV.AntiBlackListObject      = true
+GuardianV.AntiBlackListPed         = true
+GuardianV.AntiBlackListBuilding    = true
+GuardianV.AntiBlackListVehicle     = true
+GuardianV.EntityPunishment         = "BAN"
 
-GUARDIANV.AntiSpamPed              = true
-GUARDIANV.MaxPed                   = 4
+-- Anti-NPC Spawn Settings
+GuardianV.AntiSpawnNPC             = true
 
-GUARDIANV.AntiSpamObject           = true
-GUARDIANV.MaxObject                = 15
+-- Anti-Spam Entity Settings
+GuardianV.AntiSpamVehicle          = true
+GuardianV.MaxVehicle               = 10
 
-GUARDIANV.SpamPunishment           = "KICK"  
+GuardianV.AntiSpamPed              = true
+GuardianV.MaxPed                   = 4
 
---【 𝗔𝗻𝘁𝗶 𝗖𝗵𝗮𝗻𝗴𝗲 𝗣𝗲𝗿𝗺 】--
-GUARDIANV.AntiChangePerm           = true
-GUARDIANV.PermPunishment           = "KICK"  
+GuardianV.AntiSpamObject           = true
+GuardianV.MaxObject                = 15
 
---【 𝗔𝗻𝘁𝗶 𝗣𝗹𝗮𝘆 𝗦𝗼𝘂𝗻𝗱 】--
-GUARDIANV.AntiPlaySound            = true
-GUARDIANV.SoundPunishment          = "KICK"  
+GuardianV.SpamPunishment           = "KICK"
+
+-- Anti-Change Permission Settings
+GuardianV.AntiChangePerm           = true
+GuardianV.PermPunishment           = "KICK"
+
+-- Anti-Play Sound Settings
+GuardianV.AntiPlaySound            = true
+GuardianV.SoundPunishment          = "KICK"
+
 
 ```
