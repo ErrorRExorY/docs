@@ -67,3 +67,51 @@ exports['GuardianV']:GuardianV_ACTION("KICK", reason, details)
 -- Warn:
 exports['GuardianV']:GuardianV_ACTION("WARN", reason, details)
 ```
+
+### 🗑️ Ban Event Handler
+
+## 🛡️Secure your events
+> OUTDATED: Just use this feature from the panel and it will secure all your events automatically without editing your code as before.  
+
+
+
+You will have to replace your event handler function & also the trigger function.
+
+Copy
+--replace (from the client side):
+```
+TriggerServerEvent("my_awesome_event",999,"test")
+```
+--with:
+```
+exports["WaveShield"]:TriggerServerEvent("my_awesome_event",999,"test")
+```
+Copy
+--replace (from the server side):
+```
+AddEventHandler("my_awesome_event", function(number, string)
+    print(number, string)
+end)
+```
+--with:
+```
+exports["WaveShield"]:AddEventHandler("my_awesome_event", function(source, number, string)
+    print(number, string)
+end)
+```
+You can also secure your client events:
+
+Copy
+-- replace (from the client side):
+```
+AddEventHandler("esx_ambulancejob:revive", function(...)
+end)
+```
+-- with:
+```
+exports["WaveShield"]:AddEventHandler("esx_ambulancejob:revive", function(...)
+end)
+```
+When you secure an event you also need to remove his register function.(RegisterServerEvent or RegisterNetEvent)
+
+We recommand only to secure those that are exploitable (giving advantage, money, weapon, vehicles etc)
