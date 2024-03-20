@@ -84,7 +84,7 @@ TriggerServerEvent("my_awesome_event",999,"test")
 ```
 --with:
 ```
-exports["WaveShield"]:TriggerServerEvent("my_awesome_event",999,"test")
+exports["GuardianV"]:TriggerServerEvent("my_awesome_event",999,"test")
 ```
 Copy
 --replace (from the server side):
@@ -95,7 +95,7 @@ end)
 ```
 --with:
 ```
-exports["WaveShield"]:AddEventHandler("my_awesome_event", function(source, number, string)
+exports["GuardianV"]:AddEventHandler("my_awesome_event", function(source, number, string)
     print(number, string)
 end)
 ```
@@ -109,7 +109,7 @@ end)
 ```
 -- with:
 ```
-exports["WaveShield"]:AddEventHandler("esx_ambulancejob:revive", function(...)
+exports["GuardianV"]:AddEventHandler("esx_ambulancejob:revive", function(...)
 end)
 ```
 When you secure an event you also need to remove his register function.(RegisterServerEvent or RegisterNetEvent)
