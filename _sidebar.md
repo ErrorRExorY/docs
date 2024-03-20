@@ -4,6 +4,6 @@
 
 - [📄 Documentation](documentation)
 
-- [Functions](functions)
+- [🔨 Functions](functions)
 
 
