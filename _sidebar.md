@@ -1,5 +1,9 @@
-- [Home](home)
+- [🏠 Home](home)
 
-- [Installation](install)
+- [✅ Getting Started](gettingstarted)
+
+- [📄 Documentation](documentation)
 
 - [Functions](functions)
+
+
