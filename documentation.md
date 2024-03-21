@@ -115,3 +115,32 @@ end)
 When you secure an event you also need to remove his register function.(RegisterServerEvent or RegisterNetEvent)
 
 We recommand only to secure those that are exploitable (giving advantage, money, weapon, vehicles etc)
+
+## 🤖Commands
+
+```
+GuardianV install (you shouldn't need to run it, it does automatically)
+GuardianV uninstall
+
+GuardianV baninfo <banId>
+GuardianV ban <serverId> <optional:reason>
+GuardianV unban <banId> <optional:reason>
+GuardianV unban all
+
+GuardianV reload (reload the server config files without restarting the server)
+```
+
+## 🥙Adding staffs
+
+```
+# server.cfg
+add_ace identifier.license:xxx "GuardianV.Admin" allow
+add_ace identifier.license:xxx "GuardianV.Commands" allow
+add_ace identifier.steam:xxx "GuardianV.Bypass" allow
+
+add_ace group.mod "GuardianV.Bypass" allow
+add_ace group.admin "GuardianV.Bypass" allow
+add_ace group.admin "GuardianV.Commands" allow
+
+# It works with any identifier or group you defined using ace perms
+```
