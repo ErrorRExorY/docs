@@ -1,4 +1,4 @@
-# GuardianV documentation
+# GuardianV Documentation
 
 ## Client-Side Protection
 
