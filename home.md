@@ -11,7 +11,7 @@ Welcome to the official documentation of GuardianV, the advanced AntiCheat syste
 GuardianV provides a comprehensive solution for keeping your FiveM server secure by detecting and preventing a wide range of fraud attempts and unwanted behaviors. From checking player integrity to preventing cheat usage, GuardianV ensures your server provides a fair and safe environment for all players.
 
 
-#### First steps
+#### 🪜First steps
 
 Before installing GuardianV on your server, make sure you have met the following requirements:
 
