@@ -1,6 +1,6 @@
 # GuardianV Documentation
 
-> [GuardianV](https://guardianv.de/) AntiCheat, definieren Sie Ihr FiveM-Erlebnis neu.
+> [GuardianV](https://guardianv.de/) AntiCheat, redefine your FiveM experience.
 
 ## Welcome
 
