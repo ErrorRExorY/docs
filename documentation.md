@@ -119,9 +119,6 @@ We recommand only to secure those that are exploitable (giving advantage, money,
 ## 🤖Commands
 
 ```
-GuardianV install (you shouldn't need to run it, it does automatically)
-GuardianV uninstall
-
 GuardianV baninfo <banId>
 GuardianV ban <serverId> <optional:reason>
 GuardianV unban <banId> <optional:reason>
